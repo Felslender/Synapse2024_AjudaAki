@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
-
+import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { PerfilProfComponent } from './components/perfil-prof/perfil-prof.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
@@ -22,7 +22,7 @@ import { ModalProfComponent } from './components/modal-prof/modal-prof.component
     LoginCadastroComponent,
     ModalProfComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserModule, FormsModule,],
+  imports: [BrowserModule, AppRoutingModule, BrowserModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })

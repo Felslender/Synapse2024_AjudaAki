@@ -8,43 +8,46 @@ import { Router } from '@angular/router';
 })
 export class CadastroUserComponent {
 
-  showProf = false;
+  showProf: boolean = false;
   showDados: boolean = true;
   showEndereco: boolean = false;
   showPerfil: boolean = false;
   showConfirmar : boolean = false;
   showProximo: boolean = true;
+  showModal: boolean = false;
   step: number = 1;
-
 
 
   constructor(private router: Router) { }  
 
   
-
-
   voltarStep() {
-    this.step = this.step - 1;
-
-    if (this.step === 0) {
+    
+    if(this.step === 1) {
       this.router.navigateByUrl(''); 
     }
 
-    else if(this.step === 1) {
-      this.showDados = true;
-      this.showEndereco = false;
-    }
-
     else if(this.step === 2){
-      this.showEndereco = true;
-      this.showPerfil = false;
-      this.showConfirmar = false;
+      this.showEndereco = false;
       this.showProximo = true;
+      this.showDados = true;
+      this.step = this.step - 1;
     }
   
     else if(this.step === 3){
       this.showConfirmar = false;
       this.showProximo = true;
+      this.showEndereco = true;
+      this.showPerfil = false;
+      this.step = this.step - 1;
+    }
+
+    else if(this.step === 4){
+      this.showProf = false;
+      this.showPerfil = true;
+      this.showConfirmar = true;
+      this.showProximo = false;
+      this.step = this.step - 1;
     }
 
     console.log(this.step);
@@ -52,6 +55,7 @@ export class CadastroUserComponent {
 
 
   toggleSwitch() {
+
     if (this.step === 1) {
       this.showDados = false;
       this.showEndereco = true;
@@ -66,16 +70,17 @@ export class CadastroUserComponent {
       this.step++;
     }
 
+    else if(this.step === 3){
+      this.showModal = !this.showModal;
+    }
+
+    else if(this.step === 4){
+      this.showProf = true
+    }
 
     console.log(this.step);
-
   }
 
-  mostrarModal(){
-    
-    
-
-  }
-
+  
 
 }

@@ -69,19 +69,49 @@
         <div class="dados-foto" *ngIf="showPerfil">
             <img class="img-mais" src="../../../assets/images/add_.png">
         </div>
+        <div class="campos-prof" *ngIf="showProf">
+            <div class="box-discricoes">
+                <div class="box-descri-rapida">
+                    <h2>Descrição rápida</h2>
+                    <input type="text" class="input-descr" placeholder="">
+                    <p class="p">Fale um pouco sobre suas aulas, qual seu foco, métodos...</p>
+                </div>
+                <div class="box-descri-longa">
+                    <div class="box-input-descrLonga">
+                        <h2 class="h2-descri">Descrição</h2>
+                        <input type="text" class="input-descrLonga" placeholder="">
+                        <p class="p">Fale um pouco sobre suas aulas, qual seu foco, métodos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-area-precos">
+                <div class="box-area">
+                    <h2 div="h2-area">Qual sua area ?</h2>
+                    <div class="area">
+                        <input type="text" class="input-area" placeholder="">
+                    </div>
+                </div>
+
+                <div class="box-precos">
+                    <h2 class="h2-preco">Qual a faixa de preço hora/aula ?</h2>
+                    <div class="precos">
+                        <input type="text" class="input-preco1" placeholder="">
+                        <p>até</p>
+                        <input type="text" class="input-preco2" placeholder="">
+                    </div>
+                </div>
+            </div>
+        </div>
         <h2 class="texto-sobre">Fale um pouco sobre você!</h2>
     </div>
+        
+
     <div class="box-etapas">
         <div class="botao-posicao">
-            <button type="button" class="confirmar-cadastro" (click)="mostrarModal()" *ngIf="showConfirmar">Finalizar</button>
+            <button type="button" class="confirmar-cadastro" (click)="toggleSwitch()" *ngIf="showConfirmar">Finalizar</button>
+            <app-modal-prof [showModal]="showModal"></app-modal-prof>
             <button type="button" class="botao" (click)="toggleSwitch()" *ngIf="showProximo">Próximo</button>
         </div>
     </div>
-<div class="modal-prof">
-    <div class="box-modal">
-        <dialog>
-            <h1>TESTE AAAAAAAAAAAAAAAAAAAAA</h1>
-        </dialog>
-    </div>
-</div>
+
 </div>
