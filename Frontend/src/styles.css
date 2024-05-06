@@ -1,5 +1,147 @@
-/* You can add global styles to this file, and also import other style files */
-
 *{
     margin: 0px;
+   
+}
+/* /////////Scroll bar///////// */
+
+::-webkit-scrollbar {
+    width: 16px; /* Largura da barra de rolagem */
+    background-color: #f1f1f1;
+    
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #E80049; /* Cor do polegar da barra de rolagem */
+    border-radius: -5px; /* Raio de borda do polegar da barra de rolagem */
+    
+    
+}
+/* /////////Conteúdo///////// */
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 120px 0 120px;
+}
+
+/* /////////Cores/////////// */
+:root{
+    --main-color: #E80049;
+    --blue-color: #365dc0;
+    --bg-color: #f1f1f1;
+}
+.cor_bg{
+    background-color: var(--bg-color);
+}
+
+/* /////////Fontes/////////// */
+.text_principal{
+    font-size: 58px;
+    font-family: "PT Mono", monospace;
+}
+.text_sub{
+    font-size: 48px;
+    font-family: "PT Mono", monospace;;
+}
+.text_modal{
+    font-size: 40px;
+    font-family: "PT Sans", sans-serif;
+}
+.text_medio{
+    font-size: 24px;
+    font-family: "PT Sans", sans-serif;
+}
+.text_aviso{
+    font-size: 20px;
+    font-family: "PT Sans", sans-serif;
+}
+.text_peq{
+    font-size: 16px;
+    font-family: "PT Sans", sans-serif;
+}
+/* /////////Buttons/////////// */
+.btn_rosa{
+    width: 247px;
+    height: 49px;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    border: none;
+    transition: transform 0.6s ease;
+    
+
+}
+.btn_rosa:hover{
+    background-color: #af0339;
+    transform: scale(1.04);
+}
+
+.btn_branco{
+    width: 247px;
+    height: 49px;
+    background-color: white;
+    border-radius: 10px;
+    color: var(--main-color);
+    text-align: center;
+    border: none;
+    transition: transform 0.6s ease;
+
+}
+.btn_branco:hover{
+    background-color: #afafaf;
+    transform: scale(1.04);
+
+}
+
+.btn_azul{
+    width: 247px;
+    height: 49px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    border: none;
+    background-color: var(--blue-color);
+    transition: transform 0.6s ease;
+
+}
+.btn_azul:hover{
+    background-color: #365dc0;
+    transform: scale(1.04);
+}
+
+.btn_cinza{
+    width: 247px;
+    height: 49px;
+    background-color: #636466;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    border: none;
+    transition: transform 0.3s ease;
+
+}
+.btn_cinza:hover{
+    background-color: #3b3b3b;
+    transform: scale(1.04);
+
+}
+
+/* /////////imagens/////////// */
+.img_media{
+    width: 246px;
+    height: 369px;
+    margin-top: 50px;
+    border-radius: 18px;
+}
+.img_prof{
+    width: 158px ;
+    height: 158px ;
+    border-radius: 80px;
+}
+.img_prof_big{
+    width: 240px ;
+    height: 240px ;
+    border-radius: 120px;
 }
